@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 120" fill="none">
+  <!-- Upper triangle -->
+  <polygon points="15,30 85,60 15,90" fill="#42A5F5" opacity="0.95"/>
+  <!-- Lower triangle (offset) -->
+  <polygon points="35,60 85,60 35,90 85,90" fill="#0D47A1" opacity="0.85"/>
+  <!-- Accent triangle -->
+  <polygon points="35,60 55,60 35,80" fill="#1565C0" opacity="0.9"/>
+</svg>
