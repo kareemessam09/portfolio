@@ -4,18 +4,21 @@
  * Populated from Kareem Essam's CV.
  */
 
+const withBase = (fileName) =>
+  `${import.meta.env.BASE_URL}${fileName.replace(/^\/+/, "")}`;
+
 export const personalInfo = {
   initials: "KE",
   name: "Kareem Essam",
   location: "Cairo, Egypt",
   headline: "Software Engineer",
-  photo: "/mee.jpg",
+  photo: withBase("mee.jpg"),
   roles: ["Mobile Developer", "Full-Stack Builder", "Next Hokage"],
   summary:
     "A true shinobi adapts to any battlefield. I use Shadow Clone logic to ensure my systems are fighting on every user interface at once. While the world sees the flashy techniques of the frontend, I’m anchored in the Hidden Backend Village, sealing chaotic data into elegant, high-performance architectures. I don't just build applications; I architect entire digital nations with the precision of a Sealing Jutsu master.",
   closingQuote:
     "I debug for fun, ship on optimism, and call it character development.",
-  resumeLink: "/KareemEssamResume.pdf",
+  resumeLink: withBase("KareemEssamResume.pdf"),
   email: "kareemessam.me@gmail.com",
   phone: "+20 1554158037",
   github: "https://github.com/kareemessam09",

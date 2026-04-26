@@ -3,6 +3,9 @@ import { FiGithub as Github, FiLinkedin as Linkedin } from "react-icons/fi";
 import { personalInfo } from "../data";
 import RevealOnScroll from "../components/RevealOnScroll";
 
+const withBase = (fileName) =>
+  `${import.meta.env.BASE_URL}${fileName.replace(/^\/+/, "")}`;
+
 export default function Contact() {
   const year = new Date().getFullYear();
 
@@ -128,7 +131,7 @@ export default function Contact() {
               }}
             >
               <img
-                src="/me-quote.jpg"
+                src={withBase("me-quote.jpg")}
                 alt="Kareem being dramatic"
                 style={{
                   width: "150px",

@@ -4,6 +4,9 @@ import { ArrowDown, FileText, Mail } from "lucide-react";
 import { FiGithub as Github, FiLinkedin as Linkedin } from "react-icons/fi";
 import { personalInfo } from "../data";
 
+const withBase = (fileName) =>
+  `${import.meta.env.BASE_URL}${fileName.replace(/^\/+/, "")}`;
+
 /* Typing effect for role cycling */
 function useTypingCycle(words, typingSpeed = 90, pauseMs = 2200) {
   const [display, setDisplay] = useState("");
@@ -320,7 +323,7 @@ export default function Hero() {
 
           {/* Android mascot */}
           <motion.img
-            src="/icons8-android-logo-480.png"
+            src={withBase("icons8-android-logo-480.png")}
             alt="Android logo"
             animate={{ y: [0, -12, 0], rotate: [-6, 6, -6] }}
             transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }}
@@ -336,7 +339,7 @@ export default function Hero() {
 
           {/* Flutter logo */}
           <motion.img
-            src="/icons8-flutter-384.png"
+            src={withBase("icons8-flutter-384.png")}
             alt="Flutter logo"
             animate={{ y: [0, -10, 0], rotate: [4, -4, 4] }}
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
@@ -352,7 +355,7 @@ export default function Hero() {
 
           {/* Spring Boot logo */}
           <motion.img
-            src="/icons8-spring-boot-480.png"
+            src={withBase("icons8-spring-boot-480.png")}
             alt="Spring Boot logo"
             animate={{ y: [0, -8, 0], rotate: [-3, 3, -3] }}
             transition={{ duration: 3.8, repeat: Infinity, ease: "easeInOut", delay: 1.2 }}
@@ -368,7 +371,7 @@ export default function Hero() {
 
           {/* Node.js logo */}
           <motion.img
-            src="/icons8-nodejs-480.png"
+            src={withBase("icons8-nodejs-480.png")}
             alt="Node.js logo"
             animate={{ y: [0, -10, 0], rotate: [5, -5, 5] }}
             transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
