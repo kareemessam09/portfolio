@@ -1,4 +1,4 @@
-export default function SectionHeading({ label, title }) {
+export default function SectionHeading({ label, title, color }) {
   return (
     <div style={{ marginBottom: "3rem" }}>
       <p
@@ -7,7 +7,7 @@ export default function SectionHeading({ label, title }) {
           fontSize: "0.75rem",
           letterSpacing: "0.12em",
           textTransform: "uppercase",
-          color: "var(--accent)",
+          color: color || "var(--accent)",
           marginBottom: "0.5rem",
         }}
       >

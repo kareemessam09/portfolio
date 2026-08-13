@@ -1,11 +1,21 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowDown, FileText, Mail } from "lucide-react";
+import { ArrowDown, Briefcase, FileText, Layers, Mail, Users } from "lucide-react";
 import { FiGithub as Github, FiLinkedin as Linkedin } from "react-icons/fi";
+import { IoLogoGooglePlaystore } from "react-icons/io5";
 import { personalInfo } from "../data";
 
 const withBase = (fileName) =>
   `${import.meta.env.BASE_URL}${fileName.replace(/^\/+/, "")}`;
+
+/* Credible roles first, the Naruto wink rides last */
+const HERO_ROLES = ["Android Engineer", "Mobile Developer", "Flutter Builder", "Next Hokage"];
+
+const HERO_STATS = [
+  { icon: IoLogoGooglePlaystore, text: "1 app live on Play Store" },
+  { icon: Layers, text: "Full-stack, end-to-end" },
+  { icon: Briefcase, text: "Android Intern @ Pixalab" },
+];
 
 /* Typing effect for role cycling */
 function useTypingCycle(words, typingSpeed = 90, pauseMs = 2200) {
@@ -79,7 +89,7 @@ function SocialPill({ href, icon: Icon, label, external = true }) {
 }
 
 export default function Hero() {
-  const typed = useTypingCycle(personalInfo.roles);
+  const typed = useTypingCycle(HERO_ROLES);
 
   const containerVariants = {
     hidden: {},
@@ -173,9 +183,9 @@ export default function Hero() {
               margin: "0 0 0.5rem",
             }}
           >
-            I build things
+            I build mobile apps
             <br />
-            for mobile <span style={{ color: "var(--accent)" }}>&</span> the cloud.
+            that actually <span style={{ color: "var(--accent)" }}>ship</span>.
           </motion.h1>
 
           <motion.div
@@ -202,7 +212,10 @@ export default function Hero() {
               marginBottom: "2rem",
             }}
           >
-            {personalInfo.summary}
+            I take products from idea to Play Store — native Android with Jetpack Compose,
+            cross-platform with Flutter, and the Node.js backends behind them. Currently
+            building Android at Pixalab AI; already shipped a live multi-role delivery
+            marketplace serving Al-Salhia Al-Jadida.
           </motion.p>
 
           <motion.div
@@ -269,6 +282,42 @@ export default function Hero() {
               <FileText size={15} />
               Download Resume
             </a>
+          </motion.div>
+
+          {/* Proof strip */}
+          <motion.div
+            variants={childVariants}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "0.55rem 0.9rem",
+              flexWrap: "wrap",
+              marginBottom: "1.5rem",
+              paddingLeft: "0.9rem",
+              borderLeft: "2px solid var(--accent-border)",
+            }}
+          >
+            {HERO_STATS.map((s, i) => (
+              <span key={s.text} style={{ display: "inline-flex", alignItems: "center", gap: "0.9rem" }}>
+                <span
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: "0.4rem",
+                    fontFamily: '"JetBrains Mono", monospace',
+                    fontSize: "0.72rem",
+                    color: "var(--text-muted)",
+                    letterSpacing: "0.02em",
+                  }}
+                >
+                  <s.icon size={13} style={{ color: "var(--accent)", flexShrink: 0 }} aria-hidden="true" />
+                  {s.text}
+                </span>
+                {i < HERO_STATS.length - 1 && (
+                  <span aria-hidden="true" style={{ color: "var(--text-dimmed)" }}>·</span>
+                )}
+              </span>
+            ))}
           </motion.div>
 
           <motion.div

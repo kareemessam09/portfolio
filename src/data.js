@@ -18,7 +18,7 @@ export const personalInfo = {
     "A true shinobi adapts to any battlefield. I use Shadow Clone logic to ensure my systems are fighting on every user interface at once. While the world sees the flashy techniques of the frontend, I’m anchored in the Hidden Backend Village, sealing chaotic data into elegant, high-performance architectures. I don't just build applications; I architect entire digital nations with the precision of a Sealing Jutsu master.",
   closingQuote:
     "I debug for fun, ship on optimism, and call it character development.",
-  resumeLink: withBase("KareemEssamResume.pdf"),
+  resumeLink: withBase("KareemEssamCV.pdf"),
   email: "kareemessam.me@gmail.com",
   phone: "+20 1554158037",
   github: "https://github.com/kareemessam09",
@@ -34,6 +34,19 @@ export const navLinks = [
 ];
 
 export const experience = [
+  {
+    role: "Android Intern",
+    title: "Android Intern", // rendered by Experience.jsx (uses exp.title)
+    company: "Pixalab AI",
+    location: "Remote",
+    period: "Jul 2026 – Present",
+    type: "work",
+    icon: "Cpu",
+    bullets: [
+      "Contributed Android UI features in Jetpack Compose, translating Figma designs into responsive, production-ready screens across the app's main user flows.",
+      "Implemented MVVM business logic with REST APIs (Retrofit) and reactive state (Flow/Coroutines); collaborated in Agile using Git, code reviews, and unit tests.",
+    ],
+  },
   {
     company: "Freelance",
     title: "Mobile Developer",
