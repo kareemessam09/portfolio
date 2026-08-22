@@ -18,7 +18,7 @@ export const personalInfo = {
     "A true shinobi adapts to any battlefield. I use Shadow Clone logic to ensure my systems are fighting on every user interface at once. While the world sees the flashy techniques of the frontend, I’m anchored in the Hidden Backend Village, sealing chaotic data into elegant, high-performance architectures. I don't just build applications; I architect entire digital nations with the precision of a Sealing Jutsu master.",
   closingQuote:
     "I debug for fun, ship on optimism, and call it character development.",
-  resumeLink: withBase("KareemEssamCV.pdf"),
+  resumeLink: withBase("KareemEssamCv.pdf"),
   email: "kareemessam.me@gmail.com",
   phone: "+20 1554158037",
   github: "https://github.com/kareemessam09",
